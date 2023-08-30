@@ -1,0 +1,90 @@
+# API de Personajes de Rick y Morty
+
+Este repositorio contiene el código fuente para una API de personajes de la serie Rick y Morty. La API permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) en los personajes, incluyendo detalles como nombre, estado, especie, género, etc.
+
+## Endpoints
+
+A continuación se presentan los endpoints disponibles para interactuar con la API:
+
+**Obtener todos los personajes**
+
+VERB : GET: http://localhost:8000/api/edit/{id}
+
+
+**Obtener detalles de un personaje específico**
+
+
+VERB : PATCH: http://localhost:8000/api/edit/{id}
+
+**Crear un nuevo personaje**
+
+
+VERB : POST: http://localhost:8000/api/create
+
+
+**Actualizar los detalles de un personaje**
+
+
+VERB : PUT: http://localhost:8000/api/update/{id}
+
+
+**Eliminar un personaje**
+
+
+VERB : DELETE: http://localhost:8000/api/delete/{id}
+
+
+
+
+## Requisitos
+
+- PHP >= 8.2
+- Laravel >= 10
+- Composer
+
+## Configuración
+
+1. Clona este repositorio en tu máquina local.
+2. Instala las dependencias utilizando `composer install`.
+3. Crea una copia del archivo `.env.example` y renómbrala a `.env`. Configura las variables de entorno según tu configuración.
+
+DB_CONNECTION=sqlite
+# DB_HOST=127.0.0.1
+# DB_PORT=3306
+#DB_DATABASE=C:/Users/SANTANA Y HELEN/rick-y-morty-api/rickandmorty_v1.sqlite
+# DB_USERNAME=root
+# DB_PASSWORD=
+
+----crea una base de datos llamda database.slite o copia una ya existente y ponle ese nombre
+
+laravel en las bases ya existente intentara agregar tiempo de edicion y creacion para evitar conflictos usa el siguiente ejemplo
+
+Ejemplo:
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Character extends Model
+{
+    public $timestamps = false;
+    
+    // Resto del modelo
+}
+
+4. Genera una clave de aplicación usando `php artisan key:generate`.
+
+5. Ejecuta las migraciones para crear las tablas de la base de datos con `php artisan migrate`.
+
+## Uso
+
+1. Inicia el servidor local con `php artisan serve`.
+2. Accede a la API utilizando los endpoints mencionados anteriormente.
+
+## Contribuciones
+
+¡Contribuciones y mejoras son bienvenidas! Si encuentras errores este es mi correo jhonathan.perea@hotmail.com numero de contacto +57 322 4649585
+
+## Licencia
+
+
